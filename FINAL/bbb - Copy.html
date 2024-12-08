@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Homepage</title>
+<style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.open-modal {
+            padding: 5px 20px;
+            background-color: #3d37f0;
+            color: rgb(13, 13, 13);
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+         
+            text-decoration: none;
+            
+        }
+
+        .open-modal:hover {
+            background-color: #c6e1fa;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-toggle {
+            display: none;
+        }
+
+        .modal-toggle:checked+.modal {
+            display: block;
+        }
+
+        .modal-content {
+            background-color: #d5e6fa;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #121212;
+            width: 300px;
+            border-radius: 5px;
+            position: relative;
+            color:black;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            border: none;
+            padding: 50px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .open-modala {
+            padding: 5px 10px;
+            background: none;
+            color: black;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inine-block;
+            text-decoration: none;
+            text-align: right;
+       
+      
+            
+        }
+
+        .open-modal-hover {
+            background-color: #0056b3;
+        }
+
+        .modala {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            color:black;
+      
+        }
+
+        .modal-togglea {
+            display: none;
+           
+        }
+
+        .modal-togglea:checked+.modala {
+            display: block;
+        }
+
+        .modala-content {
+            background-color: #d5e6fa;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 350px;
+         
+            border-radius: 5px;
+            position: relative;
+            color:black;
+        }
+
+        .closea {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .closea:hover {
+            color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input[type="date"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            border: none;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            width:100px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    color: #ff6f61;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6f61;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+
+
+
+
+    .navbar {
+        background-color:rgb(180, 211, 237);
+  color: white;
+ padding: 2px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+    top: 0;
+    z-index: 1000;
+
+
+}
+
+.navbar .logo h1 a {
+  color:black;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+   
+   
+    
+  
+.hero {
+  background-color: #f4f4f4;
+  color: rgb(11, 11, 11);
+  text-align: center;
+  padding: 10px 5px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  padding: 12px 25px;
+  background-color: #ff8c00;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #ff5c00;
+}
+
+
+
+    
+    
+
+.footer {
+    background-color:rgb(31, 32, 33);
+    color: #fcf7f7;
+    text-align: center;
+    padding: 0px 0PX;
+    position: relative;
+ HEIGHT:30PX;
+   
+    
+}
+
+
+#outerbox {
+    width: 400px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center; 
+    width: 450px;
+    margin: 5px auto ;
+    box-shadow:0px 5px 10px #121212;
+    margin-bottom: 30px;
+
+}
+
+#sliderbox {
+    position: relative;
+    display: flex;
+    width: 4500px;
+    height: 450px;
+    animation: slider 45s infinite;
+}
+
+@keyframes slider {
+
+    0%,
+    10% {
+        left: 0;
+    }
+
+    12.5%,
+    22.5% {
+        left: -450px;
+    }
+
+    25%,
+    35% {
+        left: -900px;
+    }
+
+    37.5%,
+    47.5% {
+        left: -1350px;
+    }
+
+    50%,
+    60% {
+        left: -1800px;
+    }
+
+    62.5%,
+    72.5% {
+        left: -2250px;
+    }
+
+    75%,
+    85% {
+        left: -2700px;
+    }
+
+    87.5%,
+    97.5% {
+        left: -3150px;
+    }
+
+    100% {
+        left: -3600px;
+    }
+}
+
+#sliderbox img {
+    width: 450px;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+    
+ 
+</style>
+
+  
+
+</style>
+</head>
+
+
+<header>
+    <nav class="navbar">
+      <div class="logo">   
+         
+         
+        <img src="c:\Users\Admin\Pictures\looogoggg-removebg-preview.png"  height="100px" width="150px">  
+      </div>
+      <ul class="nav-links">
+        <li><a href="c:\Users\Admin\bbb.html"><B>Home</B></a></li></B>
+        <li><a href="c:\Users\Admin\Documents\anther.html"><B>Products</a></li></B>
+       
+        <li><a href="c:\Users\Admin\Documents\ABOUT.HTML"><B>About</a></li></B>
+       
+       <li><label for="modal-toggle" class="open-modal"><B>Login</label></B>
+            <input type="checkbox" id="modal-toggle" class="modal-toggle">
+
+            <div class="modal">
+                <div class="modal-content">
+                    <label for="modal-toggle" class="close">&times;</label><br>
+                    <center><h2>Log-in Form</h2></center><br><br>
+                    <form>
+                        <input type="text" id="username" name="username" required>
+                       <center> Username</center>
+                       <br>
+                        <input type="text" id="password" name="password" required>
+                        <center> Password</center>
+                        <br>
+                       <center> <button type="submit">Log-in</button> </center>
+                                     <br>
+
+                        <label for="modal-togglea" class="open-modala">Register here!</label>
+                        <input type="checkbox" id="modal-togglea" class="modal-togglea">
+
+                        <div class="modala">
+                            <div class="modala-content">
+                                <label for="modal-togglea" class="closea">&times;</label><br>
+                              <center>  <h2>Registration</h2> </center><br><br>
+                                <form>
+                                    <label for="username">Email Address</label>
+                                    <input type="text" id="emailaddress" name="address" required>
+                                    <label for="password">Name</label> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;
+                                    <input type="text" id="name" name="name" required><br>
+                                    <label for="password">Last Name</label> &nbsp;  &nbsp;&nbsp;
+                                    <input type="text" id="lastname" name="lastname" required>
+
+                                    <label for="password" >Age</label> &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; 
+                                    <input type="text" id="age" name="age" required>
+
+                                    <label for="password">Birthdate</label> &nbsp;  &nbsp; &nbsp; &nbsp;
+                                    <input type="text" placeholder="(mm/dd/yy)" id="birthdate" name="birthdate" required>
+                                    
+                                    <label for="password">Username</label> &nbsp; &nbsp; &nbsp;
+                                    <input type="text" id="username" name="username" required>
+                                    <label for="password">Password</label> &nbsp; &nbsp; &nbsp;
+                                    <input type="text" id="password" name="password" required>
+
+                            
+                                    &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;   <center> <button type="submit">Save</button> </center>
+                
+                                     <br>
+                           <center> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp;
+                            <label for="modal-togglea" class="open-modala">Log-in</label>
+                                     <input type="checkbox" id="modal-togglea" class="modal-togglea"></center>
+ 
+                                    
+
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+          
+
+                                    
+                                        
+                                
+
+        </li>
+        </div>
+       </ul> 
+        
+    </div>
+        </div>   
+    </nav>
+    <HR>
+      
+    <section class="hero">
+        <div class="hero-content">
+          <h2>Welcome to EYE CARE SHOP!</h2>
+          <p>Your destination for stylish, trendy, and premium sunglasses and reading glasses. Shop now and stay cool!</p>
+        
+        </div>
+      </section>
+ 
+  </header>
+  
+</div>
+
+    </div>
+<div id="outerbox">
+<div id="sliderbox">
+    
+    <img src="c:\Users\Admin\Pictures\stand 1.png">
+    <img src="c:\Users\Admin\Pictures\stand2.png" >
+      <IMG SRC="c:\Users\Admin\Pictures\stand 3.2.png">
+    <img src="c:\Users\Admin\Pictures\stand 4.png">
+    <img src="c:\Users\Admin\Pictures\stand 5.png">
+    <img src="c:\Users\Admin\Pictures\stand 3.png" >
+   <img src="c:\Users\Admin\Pictures\stand 16.png">
+    <img src="c:\Users\Admin\Pictures\stand last.png" >
+    <IMG SRC="c:\Users\Admin\Pictures\stand second.png">
+    <img src="c:\Users\Admin\Pictures\third ,ast.png">
+    
+</div>
+</div>
+
+<div class="footer">
+<p>&copy2024EyeCareShop.All Rights Reserved</p>
+</div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+
+
+
+<!DOCTYPE html>
+              <html lang="en">
+             <head>
+            <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>
+                <body>
+                <style>
+
+    
+    
+BODY{
+    background-color: rgb(224, 219, 219);
+}
+
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 35em;
+        background:rgb(243, 241, 241);
+        box-shadow: 5px 10px 20px rgb(68, 70, 71);
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        margin-top:100px;
+         border-radius: 20px;
+    }
+                 
+                    
+
+                    p {
+                        font-size: 0.6em;
+                        color: rgba(190,147,147,1.00);
+                        letter-spacing: 1px;
+                    }
+                    .images {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        margin: auto;
+                        }
+                         .imahe {
+                            width: 100%;
+                             height: 100%;
+                             border-radius: 5px;
+                             margin-right: 20px;
+                        }
+                        .slideshow-buttons {
+                    display: flex;
+                    
+                    gap: 30px;
+                }
+                .slideshow-buttons span {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    background:rgb(39, 36, 36);
+                  
+                }
+                
+                
+                .slideshow-buttons :hover{
+                    background: red;
+                    color: rgb(123, 116, 116);
+                    transform: scale(1.5)
+                    
+                
+                }
+                .pick{
+                    text-transform:uppercase;
+                    font-size: 10px;
+                }
+                .sizes{
+                    display: flex;
+                    justify-content: flex-start;
+                    column-gap:20px;
+                    flex-wrap: wrap;
+                    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+                    
+                }
+                .size{
+                    border: none;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 2px;
+                    font-size: 10px;
+                    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+                }
+                
+                    
+                
+                
+                .product{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-right: 20px;
+                }
+                #p{
+                    text-transform: uppercase;
+                }
+                .par2{
+                    font-size: 15px;
+                }
+                .description {
+                    text-transform: none;
+                    letter-spacing: 5;
+                    margin-bottom: 17px;
+                    color: rgba(20,16,16,1.00);
+                    font-size: 0.7em;
+                    line-height: 1.6em;
+                    text-align: justify;
+                }
+                .buttons{
+                    padding: 1px;
+                    display: flex;
+                    outline: 0;
+                    border: 0;
+                    border-radius: 2px;
+                    letter-spacing: 1px;
+                    color: white;
+                    cursor: pointer;	
+                }
+                .buttons:hover{
+                    transition: all 0.4s ease-in-out;
+                }
+                .add{
+                    width: 150px;
+                    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+                    text-transform: uppercase;
+                    background-color: orange;
+                }
+                .back{
+                    width: 50px;
+                    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+                    text-transform: uppercase;
+                    background-color: orangered;
+                }
+                    </style>
+              
+                
+                    <div class="container">
+                        <div class="images">
+                        <img alt="" src="c:\Users\Admin\Pictures\stand 17.png" class="imahe">
+                        <p class="pick">Choose COLOR</p>
+                            <div class="slideshow-buttons">
+                                <span style="background-color: black;"></span>
+                                <span style="background-color: red;"></span>
+                                <span style="background-color: white;"></span>
+                                <span style="background-color: blue;"></span>
+                                <span style="background-color: pink;"></span>
+                                
+                        </div>
+                        
+                        <div class="sizes">
+                            <span class="size">BLACK</span>
+                            <span class="size">RED</span>
+                            <span class="size">WHITE</span>
+                            <span class="size">BLUE</span>
+                            <span class="size">PINK</span>
+                            </div>
+                            </div>
+            <div class="product">
+                <p class="par2">EYE CARE</p>
+                <h3> Polka Dot Retro Sunglasses</h3>
+                <h3>Php500.00</h3>
+                <p class="description">Metal components that connect the temples to the frame front.In nose pads,it is made of silicone.
+                </p>
+                <div class="buttons"> 
+                <button class="add">Add to Cart</button>
+                <a href="c:\Users\Admin\Documents\ROUND GLASSES.HTML"><button class="back">Back</button></a>
+                        </div>
+                    </div>	
+            </div>
+               
+</body>
+</html>

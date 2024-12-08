@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          color: #333;
+        }nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6f61;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+        .navbar {
+            background-color:rgb(180, 211, 237);
+          color: white;
+          padding: 5px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .navbar .logo h1 a {
+          color:black;
+          text-decoration: none;
+          font-size: 24px;
+        }
+        
+        .nav-links {
+          list-style-type: none;
+          display: flex;
+          gap: 20px;
+          margin-right:50px;
+        }
+        
+        .nav-links li a {
+          color: rgb(8, 8, 8);
+          text-decoration: none;
+          font-size: 18px;
+          transition: color 0.3s;
+        }
+        
+        .nav-links li a:hover {
+          color: #ff8c00;
+        }
+        .content{
+    width: 100%;
+    height: 23px;
+    padding:auto;
+    text-align:center;
+    background-color: rgb(137, 137, 129);
+    overflow:hidden;}
+
+
+
+    .thumbnail-gallery {
+            
+            display: grid;
+            grid-template-columns: repeat(5, 18%);
+         
+            row-gap: 30px;
+            column-gap: 5px;
+            margin:50px 0px 100px 150px;
+
+         
+          
+          
+        }
+
+        .thumbnail {
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            width: 200px;
+            height: 200px;
+           
+            gap:20px;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            padding: 1px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .thumbnail:hover .description {
+            opacity: 1;
+        }
+  
+
+.back{
+	width: 70px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-transform: uppercase;
+  background-color: #e08d40;
+    
+  justify-items: center;
+ 
+margin-left: 150px;
+
+float:left;
+margin-bottom: 50px;
+border-radius: 10px;
+
+}
+.back:hover{
+  background-color: rgb(246, 41, 41);
+}
+.open-modal{
+        padding: 10px 15px;
+        background-color: #007Bff;
+        color: white;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    
+        text-decoration: none;
+      position: relative;
+    }
+    .open-modal:hover{
+        background-color: #0056b3;
+    }
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-toggle{
+display: none;
+    }
+    .modal-toggle:checked+.modal{
+        display: block;
+    }
+    .modal-content{
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .close{
+        color:#aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close:hover{
+        color: black;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    label{
+        margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding:1opx;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+    }
+    button[type="submit"]{
+        background-color: #28a745;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="submit"]:hover{
+        background-color: #218838;
+    }
+        H1{
+            padding-top: 50px;
+        }
+        </STYLE>
+            <nav class="navbar">
+                <div class="logo">   
+                   
+                   
+                  <img src="c:\Users\Admin\Pictures\looogoggg-removebg-preview.png"  height="100px" width="150px">  
+                </div>
+                <ul class="nav-links">
+                  <li><a href="c:\Users\Admin\bbb.html"><b>Home</a></li></b>
+                  <li><a href="c:\Users\Admin\Documents\anther.html"><b>Products</a></li></b>
+              
+                  <li><a href="c:\Users\Admin\Documents\ABOUT.HTML"><b>About</a></li></b>
+                  
+                    </div>
+                  </div>
+
+                  </ul>    
+                </nav>
+            <HR>
+           <CENTER><H1>AVIATOR SUNGLASSES</H1></CENTER> 
+                
+                
+         <div class="thumbnail-gallery">
+            <div class="thumbnail"><a href="c:\Users\Admin\ITEM 1.HTML"><img src="c:\Users\Admin\Pictures\stand 16.png" alt="thumbnail 1"></a>
+            <div class="description">Cyxrus Spring Sunglasses</div>
+            
+            </div>
+            <div class="thumbnail"><a href="c:\Users\Admin\ITEM 2.HTML"><img src="c:\Users\Admin\Pictures\STAND 1.1.png" alt="thumbnail 2"></a>
+            <div class="description">Smart Sunglasses</div>
+            </div>
+            <div class="thumbnail"><a href="c:\Users\Admin\item 3.html"><img src="c:\Users\Admin\Pictures\AVIATOR 2.png" alt="thumbnail 3"></a>
+            <div class="description">Decathlon Sunglasses</div>
+            </div>
+            <div class="thumbnail"><a href="c:\Users\Admin\ITEM 4.HTML"><img src="c:\Users\Admin\Pictures\AVIATOR 3..2.png" alt="thumbnail 4"></a>
+                <div class="description">Cyclone Sunglasses</div>
+                </div>
+           
+                <div class="thumbnail"><a href="c:\Users\Admin\Documents\ITEM 6.HTML"><img src="c:\Users\Admin\Pictures\AVIATOR 5.png" alt="thumbnail 5"></a>
+                    <div class="description">Vincent Sunglasses</div>             
+            </div>
+         </div>
+        
+         <div class="buttons">
+                  <a href="c:\Users\Admin\Documents\anther.html"><button class="back">Back</button></a>
+                          </div>
+</body>
+</html>

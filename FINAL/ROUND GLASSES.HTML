@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          color: #333;
+        }
+        nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    color: #ff6f61;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6f61;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+    
+        .navbar {
+            background-color:rgb(180, 211, 237);
+          color: white;
+          padding: 5px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .navbar .logo h1 a {
+          color:black;
+          text-decoration: none;
+          font-size: 24px;
+        }
+        
+        .nav-links {
+          list-style-type: none;
+          display: flex;
+          gap: 20px;
+          margin-right:50px;
+        }
+        
+        .nav-links li a {
+          color: rgb(8, 8, 8);
+          text-decoration: none;
+          font-size: 18px;
+          transition: color 0.3s;
+        }
+        
+        .nav-links li a:hover {
+          color: #ff8c00;
+        }
+        .content{
+    width: 100%;
+    height: 23px;
+    padding:auto;
+    text-align:center;
+    background-color: rgb(137, 137, 129);
+    overflow:hidden;}
+
+
+
+    .thumbnail-gallery {
+            
+            display: grid;
+            grid-template-columns: repeat(5, 18%);
+         
+            row-gap: 30px;
+            column-gap: 5px;
+            margin:50px 0px 100px 150px;
+
+         
+          
+          
+        }
+
+        .thumbnail {
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            width: 200px;
+            height: 200px;
+           
+            gap:20px;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            padding: 1px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .thumbnail:hover .description {
+            opacity: 1;
+        }
+  
+
+.back{
+	width: 70px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	text-transform: uppercase;
+  background-color: #e08d40;
+  
+ 
+  margin-left: 150px;
+
+float:left;
+margin-bottom: 50px;
+border-radius: 10px;
+
+
+
+}
+.back:hover{
+  background-color: rgb(246, 41, 41);
+}
+H1{
+  padding-top: 50PX;
+}
+        
+        </STYLE>
+            <nav class="navbar">
+                <div class="logo">   
+                   
+                   
+                  <img src="c:\Users\Admin\Pictures\looogoggg-removebg-preview.png"  height="100px" width="150px">  
+                </div>
+                <ul class="nav-links">
+                  <li><a href="c:\Users\Admin\bbb.html"><b>Home</a></li></b>
+                  <li><a href="c:\Users\Admin\Documents\anther.html"><b>Products</a></li></b>
+                 
+                  <li><a href="c:\Users\Admin\Documents\ABOUT.HTML"><b>About</a></li></b>
+                 
+                 
+                </ul>
+                
+              </nav>
+            </header>
+            <HR>
+              <center><h1>ROUND SUNGLASSES</h1></center>
+              
+         <div class="thumbnail-gallery">
+            <div class="thumbnail"><a href="c:\Users\Admin\Documents\item 12.html"><img src="c:\Users\Admin\Pictures\stand 12.png" alt="thumbnail 12"></a>
+            <div class="description">Moscot Lemtosh Sunglasses</div>
+            </div>
+            <div class="thumbnail"><a href="c:\Users\Admin\Documents\item 13.html"><img src="c:\Users\Admin\Pictures\STAND 13.png" alt="thumbnail 13"></a>
+            <div class="description">Komono Devon Sunglasses</div>
+            </div>
+            <div class="thumbnail"><a href="c:\Users\Admin\Documents\item 14.html"><img src="c:\Users\Admin\Pictures\stand 14.png" alt="thumbnail 14"></a>
+            <div class="description">Polaroid PLD Sunglasses</div>
+            </div>
+            <div class="thumbnail"><a href="c:\Users\Admin\Documents\item 15.html"><img src="c:\Users\Admin\Pictures\stand 15.png" alt="thumbnail 15"></a>
+                <div class="description">Pride Nerd Sunglasses</div>
+                </div>
+            <div class="thumbnail"><a href="c:\Users\Admin\Documents\item 16.html"><img src="c:\Users\Admin\Pictures\stand 16(2).png" alt="thumbnail 16"></a>
+                <div class="description">Metal Prosecco Sunglasses</div>
+            </div>
+            <div class="thumbnail"><a href="c:\Users\Admin\Documents\item 17.html"><img src="c:\Users\Admin\Pictures\stand 17.png" alt="thumbnail 17"></a>
+              <div class="description">Polka Dot Retro Sunglasses </div>
+              </div>
+              <div class="thumbnail"><a href="c:\Users\Admin\Documents\item 18.html"><img src="c:\Users\Admin\Pictures\stand 18.png" alt="thumbnail 18"></a>
+                <div class="description">Bavaria Sunglasses</div>
+                </div>
+                <div class="thumbnail"><a href="c:\Users\Admin\Documents\item19.html"><img src="c:\Users\Admin\Pictures\stand 19.png" alt="thumbnail 19"></a>
+                  <div class="description">John Lennon Style Round Sunglasses</div>
+                </div>
+                <div class="thumbnail"><a href="c:\Users\Admin\Documents\item 20.html"><img src="c:\Users\Admin\Pictures\stand 20.png" alt="thumbnail 20"></a>
+                  <div class="description">Doll Cool Sunglasses</div>
+                   
+
+              
+            </div>
+            </div>
+              
+            <div class="buttons">
+              <a href="c:\Users\Admin\Documents\anther.html"><button class="back">Back</button></a>
+                      </div>
+</body>
+</html>
